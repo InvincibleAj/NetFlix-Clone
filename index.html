@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>NetFlix clone</title>
     <link href="style.css" rel="Stylesheet" />
   </head>
   <body>
@@ -49,14 +49,16 @@
                     ></path>
                   </svg>
                 </div>
-                <select class="lang">
-                  <option type="text">English</option>
-                  <option type="text">Hindi</option>
+                <select class="lang" >
+                  <option type="text" selected="selected" id="english-selected" value="English">English</option>
+                  <option type="text" id="hindi-selected" value="hindi">हिन्दी</option>
                 </select>
               </div>
               <div>
                 <a href="www.stackoverflow.com">
-                  <input type="submit" value="Sign In" class="button button-signIn" />
+                  <input type="submit" value="Sign In" class="button button-signIn english" />
+                  <input type="submit" value="साइनइन करें" class="button button-signIn hindi" />
+
                 </a>
               </div>
             </div>
@@ -64,27 +66,45 @@
         </div>
         <div class="hidden-content">
           <div class="content">
-            <h1 class="style heading-1">Unlimited movies,TV shows and more</h1>
-            <p class="style heading-2">Watch anywhere. Cancel anytime.</p>
+            <h1 class="style heading-1 english">Unlimited movies,TV shows and more</h1>
+            <h1 class="style heading-1 hindi ">अनलिमिटेड फ़िल्में, टीवी शो के साथ भी बहुत कुछ</h1>
+
+            <p class="style heading-2 english">Watch anywhere. Cancel anytime.</p>
+            <p class="style heading-2 hindi">जहां चाहें देखें. जब चाहें कैंसल करें.</p>
+
             <br />
             <form>
-              <h3 class="style heading-3">
+              <h3 class="style heading-3 english">
                 Ready to watch? Enter your email to create or restart your
                 membership.
+              </h3>
+              <h3 class="style heading-3 hindi">
+                देखने के लिए तैयार हैं? अपनी मेंबरशिप बनाने या रीस्टार्ट करने के लिए अपना ईमेल एड्रेस डालें.
               </h3>
               <div class="email-start">
                   <input
                   
                     type="email"
                     placeholder="Email address"
-                    class="email"
+                    class="email english"
                   />
+                  <input
+                  
+                  type="email"
+                  placeholder="ईमेल एड्रेस"
+                  class="email hindi"
+                />
                   <div class="button2"
                   >
                     <input
                       type="button"
                       value="Get Started"
-                      class="button button-get-started"
+                      class="button button-get-started english"
+                    >
+                    <input
+                      type="button"
+                      value="शुरू करें"
+                      class="button button-get-started hindi"
                     >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-mirrorinrtl="true" class="default-ltr-cache-4z3qvp e1svuwfo1" data-name="ChevronRight" aria-labelledby=":r3:" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg></input>
                   </div>
@@ -94,5 +114,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
